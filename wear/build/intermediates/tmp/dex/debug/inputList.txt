@@ -1,0 +1,8 @@
+C:\Users\Imran\AndroidStudioProjects\WearDailer\wear\build\intermediates\classes\debug
+C:\Users\Imran\AndroidStudioProjects\WearDailer\wear\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-21b699244eae633bf613e512b427072d1c12ab3b.jar
+C:\Users\Imran\AndroidStudioProjects\WearDailer\wear\build\intermediates\pre-dexed\debug\classes-1adde8ceddf87a92f19cce891d1fe43ccac76fff.jar
+C:\Users\Imran\AndroidStudioProjects\WearDailer\wear\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-4cc28502e778c00ee3fb97275f62b61ff69dec5a.jar
+C:\Users\Imran\AndroidStudioProjects\WearDailer\wear\build\intermediates\pre-dexed\debug\classes-135561d2f3916b5f6989edf8a5b8d6fc36d2df40.jar
+C:\Users\Imran\AndroidStudioProjects\WearDailer\wear\build\intermediates\pre-dexed\debug\classes-5d93e2b9b250a54c00d2a88451c572cfcfb7fc8c.jar
+C:\Users\Imran\AndroidStudioProjects\WearDailer\wear\build\intermediates\pre-dexed\debug\classes-44db4223fe8259b5a14b4dfb068903bab4e4e5e6.jar
+C:\Users\Imran\AndroidStudioProjects\WearDailer\wear\build\intermediates\pre-dexed\debug\classes-7aa1770154a14b22e484872735cbb368ffb3f725.jar
