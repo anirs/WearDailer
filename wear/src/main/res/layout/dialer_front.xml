@@ -1,139 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     tools:context = ".MainWearActivity"
     android:id="@+id/digitalClock"
+    android:shrinkColumns="*"  android:stretchColumns="*"
+
     >
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:gravity="center_horizontal"
         android:id="@+id/phonenumber"
-        android:layout_above="@+id/contactResult"
+        android:padding="3dip"
+        android:layout_span="3"
         />
+    </TableRow>
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/contactResult"
         android:gravity="center_horizontal"
         android:layout_above="@+id/btd1"
-        android:layout_alignParentStart="true" />
-
-    <ImageView
+        android:padding="3dip"
+        android:layout_span="3"
+        />
+    </TableRow>
+    <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+
         android:id="@+id/btd1"
         android:src="@drawable/d1"
-        android:layout_above="@+id/btd4"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/btd5" />
+        android:padding="3dip"
+        android:gravity="center"
+        />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
         android:text="2"
         android:id="@+id/btd2"
-        android:paddingLeft="0dp"
-        android:paddingRight="0dp"
+        android:padding="3dip"
         android:src="@drawable/d2"
-        android:layout_alignTop="@+id/btd1"
-        android:layout_toEndOf="@+id/btd1" />
+        android:gravity="center_horizontal" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:src="@drawable/d3"
         android:id="@+id/btd3"
-        android:layout_above="@+id/btd4"
-        android:layout_alignEnd="@+id/btd6" />
-
-    <ImageView
+        android:gravity="right"
+        android:padding="3dip"
+     />
+    </TableRow>
+    <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+
         android:src="@drawable/d4"
         android:id="@+id/btd4"
-        android:layout_alignTop="@+id/btd5"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/btd2" />
+        android:padding="3dip"
+        />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:src="@drawable/d5"
         android:id="@+id/btd5"
-        android:layout_alignTop="@+id/btd6"
-        android:layout_alignStart="@+id/btd8"
-        android:layout_toStartOf="@+id/btd3"
-        android:layout_alignEnd="@+id/btd8" />
+        android:padding="3dip"
+     />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/btd6"
         android:src="@drawable/d6"
-        android:layout_above="@+id/btd9"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="23dp" />
-
+        android:padding="3dip"
+        />
+    </TableRow>
+<TableRow
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <ImageView
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:src="@drawable/d7"
         android:id="@+id/btd7"
-        android:layout_alignBottom="@+id/btd9"
-        android:layout_alignStart="@+id/btd4"
-        android:layout_toStartOf="@+id/btd8" />
+        android:padding="3dip" />
 
     <ImageView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:src="@drawable/d8"
         android:id="@+id/btd8"
-        android:layout_alignTop="@+id/btd9"
-        android:layout_centerHorizontal="true" />
+        android:padding="3dip"
+     />
 
     <ImageView
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
         android:src="@drawable/d9"
         android:id="@+id/btd9"
-        android:layout_above="@+id/btdback"
-        android:layout_alignStart="@+id/btd6" />
+        android:padding="3dip"
+        />
+</TableRow>
+<TableRow
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btcall"
-        android:src="@android:drawable/stat_sys_phone_call"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/btdback"
-        android:layout_marginBottom="19dp"
-        android:layout_alignParentStart="true" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/btd0"
         android:src="@drawable/d0"
-        android:layout_above="@+id/btcall"
-        android:layout_toEndOf="@+id/btd7" />
+        android:layout_column="1"
+     />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:src="@drawable/back"
-        android:id="@+id/btdback"
-        android:layout_above="@+id/btcall"
-        android:layout_alignStart="@+id/btd3" />
+        android:id="@+id/btdback" />
+</TableRow>
+    <TableRow>
+    <ImageView
+        android:id="@+id/btcall"
+        android:src="@android:drawable/stat_sys_phone_call"
+        android:gravity="center"
+        android:padding="3dip"
+        android:layout_span="3"
+        />
+    </TableRow>
 
-
-
-
-</RelativeLayout>
+</TableLayout >
 

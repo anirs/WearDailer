@@ -53,14 +53,14 @@ public class ContactService {
         try {
             JSONObject jObj = new JSONObject(jsonContacts);
             JSONArray jsonContactsArry = jObj.getJSONArray("contacts");
-            Log.d(TAG,"json size read"+jsonContactsArry.length());
+            Log.d(TAG,"json size read :"+jsonContactsArry.length());
             for (int j=0; j < jsonContactsArry.length(); j++) {
                    JSONObject jsonContact = jsonContactsArry.getJSONObject(j);
                    Contact contact = new Contact(jsonContact.getString("id"),jsonContact.getString("name"));
                    JSONArray jsonPhoneArry = jsonContact.getJSONArray("phoneList");
                     ContactPhone [] contactPhoneAry = new ContactPhone[jsonContactsArry.length()];
-                    for (int k=0; k < jsonContactsArry.length(); k++) {
-                        JSONObject jsonPhone = jsonContactsArry.getJSONObject(k);
+                    for (int k=0; k < jsonPhoneArry.length(); k++) {
+                        JSONObject jsonPhone = jsonPhoneArry.getJSONObject(k);
                         String type = "";
                         String num = "";
                         try {
@@ -189,11 +189,24 @@ public class ContactService {
 
     public static String setSearchContactColor(String contactName,String searchKey){
         Log.d(TAG, " Contact Name : " + contactName + " Key :"+searchKey);
-        int index = contactName.toUpperCase().indexOf(searchKey.toUpperCase());
+        String [] fullname = contactName.split(" ");
+        contactName = "";
+        for(String name: fullname)
+        {
+            if(name.toUpperCase().startsWith(searchKey.toUpperCase())){
+               // int index = contactName.toUpperCase().indexOf(searchKey.toUpperCase());
+                searchKey = name.substring(0,searchKey.length());
+                name = name.replace(searchKey,"<font color=\"red\">"+searchKey+"</font>");
+                Log.d(TAG, " name : '" + name+"'");
+            }
+            contactName = contactName+" "+name;
+        }
+        contactName = contactName.substring(1,contactName.length());
+/*        int index = contactName.toUpperCase().indexOf(searchKey.toUpperCase());
         searchKey = contactName.substring(index,searchKey.length());
         Log.d(TAG, " index 2: " + index + " Key 2:"+searchKey);
-        contactName = contactName.replace(searchKey,"<font color=\"red\">"+searchKey+"</font>");
-        Log.d(TAG, " Contact Name : " + contactName);
+        contactName = contactName.replace(searchKey,"<font color=\"red\">"+searchKey+"</font>");*/
+        Log.d(TAG, " Contact Name : '" + contactName+"'");
         return contactName;
     }
 }
